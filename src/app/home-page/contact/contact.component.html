@@ -1,5 +1,5 @@
 <section>
-  <div class="vector"></div>
+  <!--<div class="vector"></div>-->
   <div class="headline" data-aos="fade-up">
     <h1>{{'contactHeadline' | translate}}</h1>
   </div>
@@ -15,22 +15,27 @@
       <p>{{'contactCta1' | translate}} <b>{{'contactCta2' | translate}}</b></p>
     </div>
     <div class="contactForm">
-
       <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
         <label for="name"></label>
         <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="{{'inputName' | translate}}" required [ngClass]="{'invalid': !name.valid && name.touched, 'valid': name.valid && name.touched}">
         @if(!name.valid && name.touched && !name.disabled) {
-          <span class="notValid">{{'validateName' | translate}}</span>
+          <span class="notValid" [class.active]="!name.valid && name.touched">
+            {{'validateName' | translate}}
+          </span>
         }
         <label for="email"></label>
         <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="{{'inputEmail' | translate}}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" [ngClass]="{'invalid': !email.valid && email.touched, 'valid': email.valid && email.touched}">
         @if(!email.valid && email.touched && !email.disabled) {
-          <span class="notValid">{{'validateEmail' | translate}}</span>
+          <span class="notValid" [class.active]="!name.valid && name.touched">
+            {{'validateEmail' | translate}}
+          </span>
         }
         <label for="message"></label>
         <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" type="text" id="message" name="message" placeholder="{{'inputMessage' | translate}}" required [ngClass]="{'invalid': !message.valid && message.touched, 'valid': message.valid && message.touched}"></textarea>
         @if(!message.valid && message.touched && !message.disabled) {
-          <span class="notValid">{{'validateMessage' | translate}}</span>
+          <span class="notValid" [class.active]="!name.valid && name.touched">
+            {{'validateMessage' | translate}}
+          </span>
         }
         <div class="privacyPolicyContainer">
           <input type="checkbox" id="checkbox" class="checkbox" [(ngModel)]="isChecked" name="privacyPolicyCheckbox">
@@ -38,7 +43,7 @@
             <img [src]="isChecked ? './../../../assets/icons/check.png' : './../../../assets/icons/default.png'">
           </label>
           <p>
-            {{'privacyPolicy1' | translate}} <a class="privacyPolicy" href="privacy-policy" target="_blank">{{'privacyPolicy2' | translate}}</a> {{'privacyPolicy3' | translate}}.
+            {{'privacyPolicy1' | translate}} <a class="privacyPolicy" href="privacy-policy">{{'privacyPolicy2' | translate}}</a> {{'privacyPolicy3' | translate}}.
           </p>
         </div>
         <div class="submitBtn">
@@ -47,13 +52,20 @@
       </form>
     </div>
   </div>
+  <div class="arrowUp">
+    <a href="#hero-section">
+      <img src="./../../../assets/icons/arrowUp.png" alt="">
+    </a>
+  </div>
   <div *ngIf="messageSent" class="overlay">
     <div class="overlayContent">
       <p>{{ 'sendedMessage' | translate }}</p>
       <button (click)="closeOverlay(contactForm)">OK</button>
     </div>
     </div>
+    <!--
   <div class="shadowContact">
     <img src="./../../../assets/imgs/shadowlightBlueContact.png" alt="">
   </div>
+  -->
 </section>
