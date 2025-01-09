@@ -1,0 +1,126 @@
+section {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  padding: 100px 0 0;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 90px;
+  margin: 0;
+}
+
+.aboutMeText {
+  padding-left: 20px;
+  width: 540px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+.infosAboutMe {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; 
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+}
+
+.infoItem img {
+  width: 40px; 
+  height: 40px;
+}
+
+.infoItem p {
+  margin: 0; 
+}
+
+.shadowAboutMe {
+  position: absolute;
+  z-index: -1;
+  left: 1400px;
+  top: 750px;
+  width: 100px;
+  height: 150px;
+}
+
+.aboutMeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 100px;
+  >img{
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    border: 2px solid #00bee8;
+    object-fit: cover;
+  }
+}
+
+.vector {
+  position: absolute;
+  right: 0;
+  height: 2px;
+  width: calc(50vw - 622px);
+  background-color:  #00bee8;
+}
+
+@media screen and (max-width: 1445px) {
+  .vector {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  section {
+    justify-content: center;
+  }
+
+  .aboutMeContainer {
+    display: none;
+  }
+
+  .vector {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  h1 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  section {
+    padding: 5px;
+  }
+  h1 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .infoItem img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  h1 {
+    font-size: 35px;
+  }
+}
+
+

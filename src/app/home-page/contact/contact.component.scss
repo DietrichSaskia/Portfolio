@@ -1,0 +1,290 @@
+section {
+  margin: 0 auto;
+  width: 100%;
+  gap: 0;
+  padding: 200px 0 0;
+}
+
+.headline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.vector {
+  position: absolute;
+  margin-top: 70px;
+  left: 0px;
+  height: 2px;
+  width: calc(50vw - 220px);
+  background-color: #4b47ff;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+.contactContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 86px;
+}
+
+.contactInfotext {
+  width: 530px;
+  gap: 20px;
+}
+
+.contactForm {
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    width: 617px;
+    margin-bottom: 150px;
+  }
+  input, textarea {
+    font-family: 'Poppins';
+    font-size: 16px;
+    border: 2px solid #4b47ff;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 15px 25px;
+    width: 100%;
+    color: white;
+  }
+  textarea {
+    height: 202px;
+  }
+}
+
+.invalid {
+  border: 2px solid red!important;
+  outline: none;
+}
+
+.valid {
+  border: 2px solid green!important;
+  outline: none;
+}
+
+.notValid {
+  position: relative;
+  top: -15px;
+  color: red;
+  margin: 0;
+}
+
+.privacyPolicyContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  >img {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  p {
+    a {
+    text-decoration: none;
+    color: #4b47ff;
+    &:hover {
+      color: #00bee8;
+    }
+    }
+  }
+}
+
+.checkbox {
+  display: none;
+}
+
+
+.checkboxLabel {
+  cursor: pointer; 
+  display: inline-block;
+}
+
+.checkboxLabel img {
+  margin-right: 5px;
+  width: 32px; 
+  height: 32px;
+}
+
+
+.checkbox:checked {
+  margin-right: 5px;
+  width: 32px;
+  height: 32px;
+}
+
+.submitBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:disabled {
+  background-color: #b6b6b6;
+  color: white;
+  cursor: not-allowed;
+}
+
+.invalid-button {
+  background-color: #b6b6b6;
+}
+
+.valid-button {
+  background-color: #00bee8!important;
+  &:hover {
+    background-color: #4b47ff!important;
+    transform: scale(1.1);
+  }
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 253px;
+  height: 58px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #b6b6b6;
+  color: white;
+  border: none;
+  font-size: 23px;
+  padding: 15px 30px;
+}
+
+.shadowContact {
+  position: absolute;
+  z-index: -1;
+  top: 3900px;
+  right: 1300px;
+  transform: rotate(-40deg);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.overlayContent {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.overlayContent p {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.overlayContent button {
+  background-color: #00bee8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.overlayContent button:hover {
+  background-color: #4b47ff;
+}
+
+@media screen and (max-width: 1460px) {
+  .contactContainer {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .contactContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .headline {
+    margin: 0;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  .notValid {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 640px) {
+ form {
+  width: 100%!important;
+  margin-right: 20px;
+ }
+}
+
+@media screen and (max-width: 520px) {
+  .vector {
+    margin-top: 50px;
+    width: 50px;
+  }
+  h1 {
+    padding-left: 50px;
+    font-size: 60px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .contactInfotext {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  section {
+    padding: 250px 0 0;
+  }
+
+  .vector {
+    margin-top: 25px;
+  }
+  h1 {
+    font-size: 35px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  .contactInfotext {
+    width: 100%;
+  }
+}

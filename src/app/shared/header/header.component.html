@@ -1,0 +1,49 @@
+<section>
+  <nav>
+    <div class="logo">
+      <img src="./../../../assets/imgs/logo.png" alt="logo">
+    </div>
+    <div class="menu">
+      <img src="./../../../assets/icons/burger.png" alt="burger menu" class="mobileMenu" (click)="openMobileMenu()">
+      <a href="#aboutMe">{{ 'aboutMeNav' | translate }}</a>
+      <a href="#skills">{{ 'skillsNav' | translate }}</a>
+      <a href="#portfolio">{{'portfolioNav' | translate }}</a>
+      <a href="#contact">{{'contactNav' | translate }}</a>
+      <div id="languageSwitcher">
+        <a 
+          (click)="changeLanguage('de')" 
+          [class.active]="currentLanguage === 'de'">
+          DE
+        </a> |
+        <a 
+          (click)="changeLanguage('en')" 
+          [class.active]="currentLanguage === 'en'">
+          EN
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile-Menü -->
+  <div class="menuMobile" [class.active]="isMobileMenuOpen">
+    <div>
+      <img class="closeMobileMenu" src="./../../../assets/icons/close.png" alt="" (click)="closeMobileMenu()">
+    </div>
+    <a href="#aboutMe">{{ 'aboutMeNav' | translate }}</a>
+    <a href="#skills">{{ 'skillsNav' | translate }}</a>
+    <a href="#portfolio">{{'portfolioNav' | translate }}</a>
+    <a href="#contact">{{'contactNav' | translate }}</a>
+    <div id="languageSwitcher">
+      <a 
+        (click)="changeLanguage('de')" 
+        [class.active]="currentLanguage === 'de'">
+        DE
+      </a> |
+      <a 
+        (click)="changeLanguage('en')" 
+        [class.active]="currentLanguage === 'en'">
+        EN
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,43 @@
+section {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 120px 30px 120px 30px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  &:hover {
+    color: #4b47ff;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  h1 {
+    font-size: 60px!important;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  h1 {
+    font-size: 40px!important;
+  }
+
+  h2 {
+    font-size: 26px!important;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  h1 {
+    font-size: 30px!important;
+  }
+
+  h2 {
+    font-size: 20px!important;
+  }
+}

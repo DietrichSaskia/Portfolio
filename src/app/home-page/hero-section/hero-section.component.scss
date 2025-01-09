@@ -1,0 +1,253 @@
+section {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: calc(100vh - 209px);
+}
+
+.heroContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heroImageContainer {
+  position: relative;
+  z-index: -1;
+  padding: 70px 0 0;
+  >.heroImg {
+    width: 500px;
+    height: 600px;
+    object-fit: contain;
+  }
+}
+
+.shadowHeroSection {
+  position: absolute;
+  z-index: -1;
+  left: -170px;
+  top: 80px;
+}
+
+.heroIntroduceContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.introduceContainer {
+  display: flex;
+}
+
+.introduce {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.iAm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  font-weight: 400;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  letter-spacing: 4px;
+}
+
+ h1 {
+  font-size: 90px;
+  font-weight: 700;
+  margin: 0;
+}
+
+h2 {
+  font-size: 58px;
+  font-weight: 400;
+  color: #4b47ff;
+  letter-spacing: 4px;
+  margin: 0;
+}
+
+button {
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  height: 58px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  background-color: #00bee8;
+  border: none;
+  font-size: 23px;
+  font-weight: 400;
+  cursor: pointer;
+  margin-top: 35px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: #4b47ff;
+  transform: scale(1.05);
+}
+
+@media(max-width: 2560px) {
+  .linksContainer {
+    width: 1440px;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 1271px) {
+  h1 {
+    font-size: 80px;
+  }
+
+  h2 {
+    font-size: 50px;
+  }
+
+  .heroImageContainer {
+    width: 40%; /* Container passt sich der Breite des Bildschirms an */
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 1152px) {
+  h1 {
+    font-size: 70px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  .iAm {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+ .heroContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: calc(100vh - 209px);
+ }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .iAm {
+    font-size: 30px;
+  }
+
+ .heroImageContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex: none;
+  }
+
+  .heroImg {
+    width: 500px;
+    height: 400px!important;
+    object-fit: contain;
+  }
+
+  .shadowHeroSection {
+    top: 50px;
+    left: 200px;
+    width: 600px;
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .shadowHeroSection {
+    left: 150px;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .shadowHeroSection {
+    left: 100px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .shadowHeroSection {
+    left: 50px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .shadowHeroSection {
+    left: 20px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .shadowHeroSection {
+    left: -20px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .iAm {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .shadowHeroSection {
+    left: -80px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .iAm {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  h1 {
+    font-size: 35px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .iAm {
+    font-size: 18px;
+  }
+}

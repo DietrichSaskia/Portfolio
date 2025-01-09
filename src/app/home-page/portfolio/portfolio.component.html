@@ -1,0 +1,54 @@
+<section>
+  <div class="vectorBefore"></div>
+  <div class="headline" data-aos="fade-left">
+    <h1>Portfolio</h1>
+    <div class="vectorAfter"></div>
+  </div>
+  <p class="description">
+    {{ 'portfolioSubheadline' | translate }}
+  </p>
+  <div>
+    @for(item of projects; track item; let index = $index) {
+      @if(index % 2 === 0) {
+        <div class="projects">
+          <div class="projectsImg">
+            <img src="./../../../assets/imgs/{{ item.img }}" alt="">
+          </div>
+          <div class="projectsInfos">
+            <h3>{{ item.name }}</h3>
+            <h4>{{ item.skills }}</h4>
+            <p>{{ item.description | translate }}</p>
+            <div class="btnContainer">
+              <a href="https://saskia-dietrich.de/Join" target="_blank" class="liveTest">
+                {{ item.liveTest }}
+              </a>
+              <a href="https://github.com/DietrichSaskia/Join.git" target="_blank" class="github">
+                {{ item.github }}
+              </a>
+            </div>
+          </div>
+        </div>
+      }
+      @else {
+        <div class="projectsRotated">
+          <div class="projectsInfos">
+            <h3>{{ item.name }}</h3>
+            <h4>{{ item.skills }}</h4>
+            <p>{{ item.description | translate }}</p>
+            <div class="btnContainerRotated">
+              <a href="https://saskia-dietrich.de/elPolloLoco" target="_blank" class="liveTest">
+                {{ item.liveTest }}
+              </a>
+              <a href="https://github.com/DietrichSaskia/el-Polo-Loco" target="_blank" class="github">
+                {{ item.github }}
+              </a>
+            </div>
+          </div>
+          <div class="projectsImgRotated">
+            <img src="./../../../assets/imgs/{{ item.img }}" alt="">
+          </div>
+        </div>
+      }
+    }
+  </div>
+</section>

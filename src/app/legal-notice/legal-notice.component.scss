@@ -1,0 +1,24 @@
+section {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 80px 50px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  &:hover {
+    color: #4b47ff;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  h1 {
+    font-size: 60px!important;
+    margin-top: 50px;
+  }
+}

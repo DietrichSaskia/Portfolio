@@ -1,0 +1,273 @@
+section {
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 200px;
+  padding-bottom: 100px;
+  gap: 0;
+}
+
+.headline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vectorBefore {
+  position: absolute;
+  margin-top: 65px;
+  right: 0px;
+  height: 2px;
+  width: calc(50vw - 220px);
+  background-color: #00bee8;
+}
+
+.vectorAfter {
+  position: absolute;
+  left: 350px;
+  height: 2px;
+  width: 150px;
+  background-color: #00bee8;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.description {
+  display: flex;
+  justify-content: center;  
+}
+
+.projects {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 339.19px;
+}
+
+.projectsImg {
+  display: flex;
+  justify-content: center;
+  width: 620px;
+  height: 340px;
+  object-fit: cover;
+}
+
+.projectsRotated {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: end;
+  height: 339.19px;
+}
+
+.projectsImgRotated {
+  display: flex;
+  justify-content: center;
+  width: 620px;
+  height: 340px;
+  object-fit: cover;
+}
+
+.btnContainerRotated {
+  display: flex;
+  justify-content: flex-end;
+  gap: 86px;
+}
+
+.projectsInfos {
+  width: 513px;
+}
+
+h3 {
+  color: #4b47ff;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+}
+
+h4 {
+  color: #00bee8;
+  font-size: 23px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.btnContainer {
+  display: flex;
+  gap: 86px;
+  margin-top: 10px;
+}
+
+.btnContainerRotated {
+  margin-top: 10px;
+}
+
+.liveTest {
+  text-decoration: none;
+  background-color: #4b47ff;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 23px;
+  font-weight: 400;
+  padding: 15px 30px;
+  cursor: pointer;
+  &:hover {
+    background-color: #00bee8;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+  }
+}
+
+.github {
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid #00bee8;
+  border-radius: 10px;
+  color: white;
+  font-size: 23px;
+  font-weight: 400;
+  padding: 15px 30px;
+  cursor: pointer;
+  &:hover {
+    background-color: #00bee8;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+  }
+}
+
+@media screen and (max-width: 1415px) {
+  .vectorAfter {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1320px){
+  section {
+    padding-top: 100px!important;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .vectorAfter {
+    display: none;
+  }
+
+  .projects {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+  }
+
+  .projectsImg img{
+    width: 420px;
+    height: 340px;
+    object-fit: cover;
+  }
+
+  .btnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .projectsRotated {
+    flex-direction: column-reverse;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+  }
+
+  .projectsImgRotated img{
+    width: 420px;
+    height: 340px;
+    object-fit: cover;
+  }
+
+  .btnContainerRotated {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .description {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 571px) {
+  .projectsInfos {
+    padding: 10px;
+    width: 100%!important;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .vectorBefore {
+    width: calc(50vw - 150px);
+    margin-top: 50px;
+  }
+  h1 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .liveTest {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+
+  .github {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .btnContainer, .btnContainerRotated {
+    justify-content: space-between;
+    gap: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .projectsImg img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+  }
+
+  .projectsImg {
+    width: 300px;
+    height: 230px;
+    justify-content: center;
+  }
+
+  .projectsImgRotated img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+  }
+
+  .projectsImgRotated {
+    width: 300px;
+    height: 230px;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .vectorBefore {
+    width: calc(50vw - 90px);
+    margin-top: 25px;
+  }
+  h1 {
+    font-size: 35px;
+  }
+}

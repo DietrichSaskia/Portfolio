@@ -1,0 +1,41 @@
+<section>
+  <div class="testimonials">
+    <div class="testimonialsText">
+      <div>
+      @for(item of testimonials; track item; let index = $index) {
+        @if(index == testimonialIndex) {
+          <p>{{ item.feedback | translate }}</p>
+        }
+      }
+      </div>
+      <div class="FeedbackFrom">
+        <div class="vector"></div>
+      @for(item of testimonials; track item; let index = $index) {
+        @if(index == testimonialIndex) {
+          <p class="name">{{item.from}}</p>
+        }
+      }
+      </div>
+    </div>
+    <div class="testimonialsImg">
+      @for(item of testimonials; track item; let index = $index) {
+        @if(index == testimonialIndex) {
+          <img src="./../../../assets/imgs/{{item.img}}" alt="">
+        }
+      }
+    </div>
+    <div class="shadowPortfolio">
+      <img src="./../../../assets/imgs/shadowdarkBluePortfolio.png" alt="">
+    </div>
+  </div>
+  <div class="testimonialsSwitch">
+    <img (click)="prevFeedback()" class="arrow" src="./../../../assets/icons/arrowLeft.png" alt="">
+    @for(item of testimonials; track item; let index = $index) {
+      <img 
+        class="ellipse" 
+        [src]="index == testimonialIndex ? './../../../assets/icons/ellipseBlue.png' : './../../../assets/icons/ellipseDarkblue.png'" 
+        alt="Indicator">
+    }
+    <img (click)="nextFeedback()" class="arrow" src="./../../../assets/icons/arrowRight.png" alt="">
+  </div>
+</section>
