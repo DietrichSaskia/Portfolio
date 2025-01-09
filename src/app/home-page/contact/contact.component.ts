@@ -16,7 +16,6 @@ export class ContactComponent {
   isSending: boolean = false;
   messageSent: boolean = false;
   isChecked: boolean = false;
-  mailTest = true;
   http = inject(HttpClient);
 
   public translateService = inject(TranslateService);
@@ -53,7 +52,7 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (respone) => {
@@ -68,12 +67,8 @@ export class ContactComponent {
             console.info('send post complete');
           },
         });
-      } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-          this.messageSent = true;
-          ngForm.resetForm();
-          console.info('send post complete');
       }
-    }
+  }
 
   closeOverlay(contactForm: NgForm) {
     this.messageSent = false; 

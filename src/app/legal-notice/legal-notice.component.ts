@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -10,12 +10,8 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './legal-notice.component.scss'
 })
 export class LegalNoticeComponent {
-  title = 'Impressum';
-  
+  title = 'Imprint';
   public translateService = inject(TranslateService);
 
-  ngOnInit(): void {
-  
-  }
 
 }
