@@ -1,16 +1,17 @@
 <section>
-  <nav>
-    <div class="logo">
-      <a href="#hero-section">
-        <img src="./../../../assets/imgs/logo.png" alt="logo">
-      </a>
-    </div>
-    <div class="menu">
-      <img src="./../../../assets/icons/burger.png" alt="burger menu" class="mobileMenu" (click)="openMobileMenu()">
-      <a href="#aboutMe">{{ 'aboutMeNav' | translate }}</a>
-      <a href="#skills">{{ 'skillsNav' | translate }}</a>
-      <a href="#portfolio">{{'portfolioNav' | translate }}</a>
-      <a href="#contact">{{'contactNav' | translate }}</a>
+  <div class="wrapper">
+    <nav>
+      <div class="logo">
+        <a href="#hero-section">
+          <img src="./../../../assets/imgs/logo.png" alt="logo">
+        </a>
+      </div>
+      <div class="menu">
+        <img src="./../../../assets/icons/burger.png" alt="burger menu" class="mobileMenu" (click)="openMobileMenu()">
+        <a href="#aboutMe">{{ 'aboutMeNav' | translate }}</a>
+        <a href="#skills">{{ 'skillsNav' | translate }}</a>
+        <a href="#portfolio">{{'portfolioNav' | translate }}</a>
+        <a href="#contact">{{'contactNav' | translate }}</a>
       <div id="languageSwitcher">
         <a 
           (click)="changeLanguage('de')" 
@@ -24,7 +25,7 @@
         </a>
       </div>
     </div>
-  </nav>
+    </nav>
 
   <!-- Mobile-Menü -->
   <div class="menuMobile" [class.active]="isMobileMenuOpen">
@@ -36,16 +37,13 @@
     <a href="#portfolio">{{'portfolioNav' | translate }}</a>
     <a href="#contact">{{'contactNav' | translate }}</a>
     <div id="languageSwitcher">
-      <a 
-        (click)="changeLanguage('de')" 
-        [class.active]="currentLanguage === 'de'">
+      <a (click)="changeLanguage('de')" [class.active]="currentLanguage === 'de'">
         DE
       </a> |
-      <a 
-        (click)="changeLanguage('en')" 
-        [class.active]="currentLanguage === 'en'">
+        <a (click)="changeLanguage('en')" [class.active]="currentLanguage === 'en'">
         EN
-      </a>
+        </a>
+      </div>
     </div>
   </div>
 </section>

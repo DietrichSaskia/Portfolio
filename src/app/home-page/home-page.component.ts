@@ -10,7 +10,7 @@ import { SocialMediaComponent } from './social-media/social-media.component';
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [HeroSectionComponent, SocialMediaComponent, AboutMeComponent, SkillsComponent, PortfolioComponent, TestimonialsComponent, ContactComponent,],
+  imports: [HeroSectionComponent, SocialMediaComponent, AboutMeComponent, SkillsComponent, PortfolioComponent, TestimonialsComponent, ContactComponent],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss'
 })
