@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -13,9 +13,5 @@ export class PrivacyPolicyComponent {
   title = 'Impressum';
   
   public translateService = inject(TranslateService);
-
-  ngOnInit(): void {
-  
-  }
 
 }

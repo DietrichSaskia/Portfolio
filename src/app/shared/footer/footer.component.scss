@@ -62,6 +62,12 @@ section {
   }
 }
 
+@media screen and (max-width: 1450px) {
+  .footerContent {
+    padding: 20px;
+  }
+}
+
 @media screen and (max-width: 920px) {
   .footerContent {
     align-items: center;

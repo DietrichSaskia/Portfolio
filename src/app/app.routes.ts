@@ -5,6 +5,6 @@ import { HomePageComponent } from './home-page/home-page.component';
 
 export const routes: Routes = [
   { path: '', component: HomePageComponent},
-  { path: 'legal-notice', component: LegalNoticeComponent},
-  { path: 'privacy-policy', component: PrivacyPolicyComponent},
+  { path: 'legal-notice', component: LegalNoticeComponent },
+  { path: 'privacy-policy', component: PrivacyPolicyComponent },
 ];

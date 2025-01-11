@@ -2,7 +2,7 @@
   <div class="wrapper">
     <nav>
       <div class="logo">
-        <a href="#hero-section">
+        <a routerLink="/">
           <img src="./../../../assets/imgs/logo.png" alt="logo">
         </a>
       </div>
@@ -26,16 +26,14 @@
       </div>
     </div>
     </nav>
-
-  <!-- Mobile-Menü -->
   <div class="menuMobile" [class.active]="isMobileMenuOpen">
     <div>
       <img class="closeMobileMenu" src="./../../../assets/icons/close.png" alt="" (click)="closeMobileMenu()">
     </div>
-    <a href="#aboutMe">{{ 'aboutMeNav' | translate }}</a>
-    <a href="#skills">{{ 'skillsNav' | translate }}</a>
-    <a href="#portfolio">{{'portfolioNav' | translate }}</a>
-    <a href="#contact">{{'contactNav' | translate }}</a>
+    <a href="#aboutMe" (click)="closeMobileMenu()">{{ 'aboutMeNav' | translate }}</a>
+    <a href="#skills"(click)="closeMobileMenu()">{{ 'skillsNav' | translate }}</a>
+    <a href="#portfolio"(click)="closeMobileMenu()">{{'portfolioNav' | translate }}</a>
+    <a href="#contact"(click)="closeMobileMenu()">{{'contactNav' | translate }}</a>
     <div id="languageSwitcher">
       <a (click)="changeLanguage('de')" [class.active]="currentLanguage === 'de'">
         DE
