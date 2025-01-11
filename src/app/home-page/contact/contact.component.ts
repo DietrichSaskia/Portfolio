@@ -23,7 +23,7 @@ export class ContactComponent {
   constructor() {
     Aos.init();
         
-    }
+  }
   
   contactData = {
     name: "",
@@ -64,7 +64,6 @@ export class ContactComponent {
           },
           complete: () => {
             this.isSending = false;
-            console.info('send post complete');
           },
         });
       }

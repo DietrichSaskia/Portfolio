@@ -2,9 +2,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed !important;
-  width: 100%; /* Nimmt die volle Breite des Viewports */
-  max-width: 1440px; /* Begrenzung auf maximal 1440px */
+  position: fixed;
   left: 0;
   right: 0;
   top: 0;
@@ -13,14 +11,13 @@ section {
   font-size: 24px;
   font-weight: 400;
   box-sizing: border-box;
-  margin: 0 auto; /* Zentriert den Header bei größeren Bildschirmen */
 }
 
 .wrapper {
-  max-width: 1440px; /* Maximale Breite */
   margin: 0 auto;
-  width: 100%;
   display: flex;
+  width: 100%;
+  max-width: 1440px;
 }
 
 
@@ -32,9 +29,9 @@ section {
   background-color: rgba(0, 0, 0, 0.8); 
   position: fixed; 
   top: 0;
+  width: 100%;
+  height: 100%;
   left: 0;
-  width: 100%; 
-  height: 100%; 
   padding: 20px; 
   z-index: 1000; 
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
@@ -63,11 +60,11 @@ section {
 }
 
 nav {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 109px;
+  width: 100%;
 }
 
 .logo img {
@@ -98,12 +95,7 @@ nav {
 }
 
 @media screen and (max-width: 1440px) {
-  section {
-      width: 100%;
-  }
-  nav {
-      width: 100%;
-  }
+ 
 }
 
 @media screen and (max-width: 850px) {

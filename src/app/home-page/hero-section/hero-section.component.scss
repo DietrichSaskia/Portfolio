@@ -1,14 +1,11 @@
 section {
-  width: 100%;
-  margin-top: 50px;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  min-height: calc(100vh - 209px);
+  margin-top: 120px;
 }
 
 .heroContainer {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -100,7 +97,6 @@ button:hover {
 
 @media(max-width: 2560px) {
   .linksContainer {
-    width: 1440px;
     justify-content: space-between;
   }
 }
@@ -135,14 +131,6 @@ button:hover {
 }
 
 @media screen and (max-width: 1050px) {
- .heroContainer {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: calc(100vh - 209px);
- }
-
   h1 {
     font-size: 60px;
   }
@@ -155,54 +143,38 @@ button:hover {
     font-size: 30px;
   }
 
- .heroImageContainer {
+  .heroContainer {
+    width: 100%;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .heroImageContainer {
+    display: flex;
+    width: 100%;
+    padding: 0;
+  }
+
+  .shadowHeroSection {
+    position: absolute; 
     display: flex;
     justify-content: center;
+    top: 60%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 0; 
+    pointer-events: none; 
+    object-fit: contain; 
     width: 100%;
-    flex: none;
   }
 
   .heroImg {
-    width: 500px;
-    height: 400px!important;
-    object-fit: contain;
-  }
-
-  .shadowHeroSection {
-    top: 50px;
-    left: 200px;
-    width: 600px;
-    height: 500px;
-  }
-}
-
-@media screen and (max-width: 990px) {
-  .shadowHeroSection {
-    left: 150px;
-  }
-}
-
-@media screen and (max-width: 870px) {
-  .shadowHeroSection {
-    left: 100px;
-  }
-}
-
-@media screen and (max-width: 770px) {
-  .shadowHeroSection {
-    left: 50px;
-  }
-}
-
-@media screen and (max-width: 670px) {
-  .shadowHeroSection {
-    left: 20px;
-  }
-}
-
-@media screen and (max-width: 670px) {
-  .shadowHeroSection {
-    left: -20px;
+    position: relative;
+    z-index: 1; 
+    display: flex;
+    width: 100%!important; 
+    height: 500px!important;
   }
 }
 
@@ -218,13 +190,13 @@ button:hover {
   .iAm {
     font-size: 20px;
   }
+
+  .heroImageContainer {
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 435px) {
-  .shadowHeroSection {
-    left: -80px;
-  }
-
   h1 {
     font-size: 40px;
   }
@@ -238,6 +210,13 @@ button:hover {
   }
 }
 
+@media screen and (max-width: 375px) {
+  .heroImg {
+    height: 350px!important;
+  }
+}
+
+
 @media screen and (max-width: 350px) {
   h1 {
     font-size: 35px;
@@ -250,4 +229,18 @@ button:hover {
   .iAm {
     font-size: 18px;
   }
+}
+
+@media screen and (max-width: 325px) {
+  .heroContainer {
+    width: 100%;
+  }
+
+  .heroImageContainer {
+    width: 100%;
+  }
+
+  .heroImg {
+    width: 100%!important;
+  } 
 }

@@ -6,13 +6,11 @@
       <p class="description">{{ item.description }}</p>
     </div>
   }
-  <!--
     <div class="shadowSkills">
       <img src="./../../../assets/imgs/shadowlightBlueSkills.png" alt="">
     </div>
-  -->
   </div>
-  <div class="skillsInfo" data-aos="fade-left">
+  <div class="skillsInfo">
     <h1>{{'skillsHeadline' | translate}}</h1>
     <p class="skillsText">
       {{'skillsText' | translate}}
@@ -25,14 +23,16 @@
       <button>{{'skillsCta' | translate}}</button>
     </a>
   </div>
-  <!--<div class="vector"></div>-->
+  <div class="vector"></div>
 </section>
 
 <section class="sectionMobile">
-  <h1>{{'skillsHeadline' | translate}}</h1>
-  <p class="skillsText">
-    {{'skillsText' | translate}}
-  </p>
+  <div class="mobileHead">
+    <h1>{{'skillsHeadline' | translate}}</h1>
+    <p class="skillsText">
+      {{'skillsText' | translate}}
+    </p>
+  </div>
   <div class="skills" data-aos="flip-left">
     @for(item of skills; track item) {
     <div>
@@ -40,10 +40,6 @@
       <p class="description">{{ item.description }}</p>
     </div>
     }
-    <!--<div class="shadowSkills">
-      <img src="./../../../assets/imgs/shadowlightBlueSkills.png" alt="">
-    </div>
-  -->
   </div>
   <h3>{{'skillsSubheadline1' | translate}} <span style="color: #4b47ff;">{{'skillsSubheadline2' | translate}}</span>{{'skillsSubheadline3' | translate}}</h3>
   <p class="skillsSubtext">

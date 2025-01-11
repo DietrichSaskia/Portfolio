@@ -1,7 +1,6 @@
 section {
   margin: 0 auto;
   width: 100%;
-  gap: 0;
   padding: 200px 0 0;
 }
 
@@ -110,7 +109,6 @@ h3 {
   display: none;
 }
 
-
 .checkboxLabel {
   cursor: pointer; 
   display: inline-block;
@@ -171,7 +169,8 @@ button:disabled {
 .arrowUp {
   display: flex;
   justify-content: end;
-  margin-bottom: 150px;
+  margin-top: 50px;
+  margin-bottom: 100px;
   cursor: pointer;
   margin-right: 20px;
 }
@@ -179,7 +178,7 @@ button:disabled {
 .shadowContact {
   position: absolute;
   z-index: -1;
-  top: 3900px;
+  top: 4300px;
   right: 1300px;
   transform: rotate(-40deg);
 }
@@ -235,7 +234,6 @@ button:disabled {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    text-align: center;
   }
 
   .headline {
@@ -262,18 +260,35 @@ button:disabled {
  }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 550px) {
+  section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .contactContainer {
+    padding: 0px;
+  }
+
+  .contactInfotext {
+    >p {
+      text-align: left;
+    }
+  }
   .vector {
-    margin-top: 50px;
-    width: 50px;
+    display: none;
+  }
+
+  .headline {
+    justify-content: flex-start;
   }
   h1 {
-    padding-left: 50px;
     font-size: 60px;
   }
 
   h3 {
     font-size: 20px;
+    text-align: left;
   }
 
   .contactInfotext {

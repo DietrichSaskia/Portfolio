@@ -12,7 +12,7 @@ import Aos from 'aos';
 })
 export class AboutMeComponent {
   constructor() {
-    Aos.init();
+   Aos.init();
   }
   
   public translateService = inject(TranslateService);

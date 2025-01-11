@@ -1,5 +1,4 @@
 section {
-  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -33,9 +32,11 @@ section {
 
 .shadowSkills {
   position: absolute;
-  top: 150px;
-  left: -550px;
+  left: -150px;
   z-index: -1;
+  >img {
+    width: 100%;
+  }
 }
 
 .vector {
@@ -111,6 +112,15 @@ h3 {
     margin-top: 120px;
   }
 
+  .mobileHead {
+    >h1 {
+      text-align: center;
+    }
+    >p {
+      text-align: left;
+    }
+  }
+
   h1 {
     order: 1;
   }
@@ -163,11 +173,6 @@ h3 {
         }
     }
   }
-
-  .shadowSkills {
-    top: 0px;
-    right: 800px;
-  }
 }
 
 @media screen and (max-width: 570px) {
@@ -175,9 +180,29 @@ h3 {
     flex-wrap: wrap;
     gap: 0px;
   }
+
+  .mobileHead {
+    >h1 {
+      text-align: left;
+    }
+    >p {
+      text-align: left;
+    }
+  }
 }
 
 @media screen and (max-width: 570px) {
+  h1 {
+    font-size: 90px;
+  }
+
+  h3 {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 550px) {
   h1 {
     font-size: 60px;
   }
@@ -187,6 +212,7 @@ h3 {
     text-align: center;
   }
 }
+
 
 @media screen and (max-width: 350px) {
   h1 {

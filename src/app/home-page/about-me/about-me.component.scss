@@ -1,11 +1,9 @@
 section {
-  width: 100%;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 0;
-  padding: 100px 0 0;
+  padding: 120px 0 0;
+  overflow: hidden;
 }
 
 h1 {
@@ -45,12 +43,13 @@ p {
 }
 
 .shadowAboutMe {
-  position: absolute;
-  z-index: -1;
-  left: 1400px;
-  top: 750px;
-  width: 100px;
-  height: 150px;
+  position: absolute; 
+  z-index: -1; 
+  pointer-events: none;
+  left: 50%;
+  >img {
+    width: 100%;
+  }
 }
 
 .aboutMeContainer {
