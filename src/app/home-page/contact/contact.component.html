@@ -16,7 +16,6 @@
     </div>
     <div class="contactForm">
       <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-        <!-- Name Input -->
         <label for="name"></label>
         <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="{{'inputName' | translate}}" required 
           [ngClass]="{'invalid': !name.valid && name.touched, 'valid': name.valid && name.touched}">
@@ -25,8 +24,6 @@
             {{'validateName' | translate}}
           }
         </span>
-    
-        <!-- Email Input -->
         <label for="email"></label>
         <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="{{'inputEmail' | translate}}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" [ngClass]="{'invalid': !email.valid && email.touched, 'valid': email.valid && email.touched}">
         <span class="notValid" [class.active]="!name.valid && name.touched">
@@ -34,8 +31,6 @@
             {{'validateEmail' | translate}}
           }
         </span>
-    
-        <!-- Message Input -->
         <label for="message"></label>
         <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" type="text" id="message" name="message" placeholder="{{'inputMessage' | translate}}" required [ngClass]="{'invalid': !message.valid && message.touched, 'valid': message.valid && message.touched}"></textarea>
         <span class="notValid" [class.active]="!name.valid && name.touched">

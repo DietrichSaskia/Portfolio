@@ -96,13 +96,20 @@ p {
 
 @media screen and (max-width: 550px) {
   section {
+    padding: 120px 0 0!important;
     padding: 5px;
-    padding-top: 100px;
   }
+
   h1 {
     font-size: 60px;
   }
+
+  #aboutMe {
+    scroll-margin-top: 100px; /* Abstand zur Oberkante des Viewports */
+  }
 }
+
+
 
 @media screen and (max-width: 430px) {
   .infoItem img {

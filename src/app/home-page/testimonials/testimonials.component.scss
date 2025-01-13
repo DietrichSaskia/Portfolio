@@ -21,8 +21,18 @@ section {
   padding: 30px 80px;
   border-radius: 32px;
   width: 800px;
-  height: 350px;
+  height: 300px;
   gap: 10px;
+}
+
+.feedback {
+  max-height: 250px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.feedback::-webkit-scrollbar {
+  display: none; /* Für Webkit-Browser (z. B. Chrome, Edge, Safari): Scrollbar ausblenden */
 }
 
 .FeedbackFrom {
@@ -90,7 +100,9 @@ section {
     margin-bottom: 400px;
   }
   .testimonials {
+    margin-top: 70px;
     flex-direction: column-reverse;
+    gap: 50px;
   }
 
   .testimonialsText {

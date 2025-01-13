@@ -17,9 +17,14 @@ a {
   }
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 670px) {
   h1 {
     font-size: 60px!important;
-    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  h1 {
+    font-size: 40px!important;
   }
 }

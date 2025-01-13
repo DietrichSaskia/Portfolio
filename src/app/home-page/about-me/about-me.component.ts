@@ -10,6 +10,7 @@ import Aos from 'aos';
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss',
 })
+
 export class AboutMeComponent {
   constructor() {
    Aos.init();

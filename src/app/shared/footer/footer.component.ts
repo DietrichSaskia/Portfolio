@@ -16,8 +16,15 @@ export class FooterComponent {
 
   currentLanguage: string = 'en';
 
+  /**
+  * Changes the current language of the application.
+  * Updates the `currentLanguage` property and emits the new language value
+  * using the `languageChange` event emitter.
+  *
+  * @param {string} lang - The language code to switch to (e.g., 'en', 'de').
+  */
   changeLanguage(lang: string) {
     this.currentLanguage = lang;
     this.languageChange.emit(lang);
-  }
+  } 
 }

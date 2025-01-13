@@ -16,13 +16,19 @@ a {
   }
 }
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 1040px) {
   h1 {
     font-size: 60px!important;
   }
 }
 
-@media screen and (max-width: 510px) {
+@media screen and (max-width: 710px) {
+  h1 {
+    font-size: 50px!important;
+  }
+}
+
+@media screen and (max-width: 590px) {
   h1 {
     font-size: 40px!important;
   }
@@ -32,12 +38,22 @@ a {
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 480px) {
   h1 {
     font-size: 30px!important;
   }
 
   h2 {
     font-size: 20px!important;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  h1 {
+    font-size: 23px!important;
+  }
+
+  h2 {
+    font-size: 18px!important;
   }
 }

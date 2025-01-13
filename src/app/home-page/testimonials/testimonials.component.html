@@ -1,7 +1,7 @@
 <section>
   <div class="testimonials">
     <div class="testimonialsText">
-      <div>
+      <div class="feedback">
       @for(item of testimonials; track item; let index = $index) {
         @if(index == testimonialIndex) {
           <p>{{ item.feedback | translate }}</p>

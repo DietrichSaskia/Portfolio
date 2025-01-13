@@ -1,6 +1,6 @@
 section {
   margin: 0 auto;
-  padding-top: 200px;
+  padding-top: 170px;
   padding-bottom: 100px;
   gap: 0;
 }
@@ -144,15 +144,13 @@ h4 {
   }
 }
 
-@media screen and (max-width: 1320px){
-  section {
-    padding-top: 100px!important;
-  }
-}
-
 @media screen and (max-width: 1100px) {
   .vectorAfter {
     display: none;
+  }
+
+  .description {
+    padding: 20px;
   }
 
   .projects {
@@ -198,12 +196,6 @@ h4 {
   }
 }
 
-@media screen and (max-width: 700px) {
-  .description {
-    padding: 10px;
-  }
-}
-
 @media screen and (max-width: 571px) {
   .projectsInfos {
     padding: 10px;
@@ -214,11 +206,14 @@ h4 {
 @media screen and (max-width: 550px) {
   section {
     padding: 20px;
+    margin-top: 0!important;
+    padding-top: 150px!important;
   }
 
   .description {
     padding: 0;
   }
+
   .vectorBefore {
     display: none;
   }

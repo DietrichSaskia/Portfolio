@@ -32,6 +32,13 @@ export class ContactComponent {
     message: "",
   }
 
+  /**
+  * Checks if the contact form is valid.
+  * Validates that the `name`, `email`, and `message` fields are non-empty
+  * and ensures the checkbox (`isChecked`) is checked.
+  *
+  * @returns {boolean} - Returns `true` if the form is valid, otherwise `false`.
+  */
   isFormValid(): boolean {
     return (
       (this.contactData.name?.trim() || '').length > 0 &&
@@ -41,6 +48,13 @@ export class ContactComponent {
     );
   }
 
+  /**
+  * Configuration for the HTTP POST request used to send form data.
+  * @type {Object}
+  * @property {string} endPoint - The endpoint URL to send the form data.
+  * @property {Function} body - A function that formats the payload as a JSON string.
+  * @property {Object} options - Additional options for the HTTP request, including headers.
+  */
   post = {
     endPoint: 'https://saskia-dietrich.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
@@ -52,29 +66,44 @@ export class ContactComponent {
     },
   };
 
+  /**
+  * Submits the contact form data via an HTTP POST request.
+  *
+  * @param {NgForm} ngForm - The Angular form object containing form state and controls.
+  */
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
-          next: (respone) => {
+          next: (response) => {
             this.messageSent = true;
             ngForm.resetForm();
           },
-          error: (error) => {
-            console.error('Error:', error);
-          },
-          complete: () => {
-            this.isSending = false;
-          },
-        });
-      }
+        error: (error) => {
+          console.error('Error:', error);
+        },
+        complete: () => {
+          this.isSending = false;
+        },
+      });
+    }
   }
 
+  /**
+  * Closes the overlay and resets the contact form.
+  *
+  * @param {NgForm} contactForm - The Angular form object to reset.
+  */
   closeOverlay(contactForm: NgForm) {
     this.messageSent = false; 
     this.resetForm(contactForm);
   }
-  
+
+  /**
+  * Resets the contact form to its initial state.
+  *
+  * @param {NgForm} contactForm - The Angular form object to reset.
+  */
   resetForm(contactForm: NgForm) {
     this.contactData = { name: '', email: '', message: '' };
     contactForm.reset();
